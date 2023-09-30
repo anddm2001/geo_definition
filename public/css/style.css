@@ -1,0 +1,43 @@
+* {
+    vertical-align: baseline;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+body {
+    padding: 5px;
+    background: #23272b;
+}
+h1, h2, h3, h4, h5, h6, p, pre, blockquote, form, ul, ol, dl {
+    margin: 20px 0;
+    color: lightgray;
+}
+li, dd, blockquote {
+    margin-left: 40px;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+#result, .alert-success, .alert-danger, #region_block{
+    display: none;
+}
+h4{
+    font-size: 20px;
+}
+p{
+    font-size: 18px;
+    font-weight: bold;
+}
+#result, #info{
+    margin-top: 50px;
+}
+#form_block{
+    margin-top: 100px;
+}
+#title_block{
+    margin-top: 50px;
+}

@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-sm-12" id="title_block">
+                <h1 class="text-center">Определение страны, региона и часового пояса по номеру телефона.</h1>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-sm-12" id="form_block">
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Номер телефона в международном формате*</span>
+                    </div>
+                    <input type="tel" id="tel" class="form-control" placeholder="Введите номер телефона" aria-label="+" aria-describedby="inputGroup-sizing-sm" required>
+                    <submit type="button" class="btn btn-primary center-block" id="button_form">Получить информацию</submit>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="info">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-sm-12">
+                <div class="alert alert-success">
+                </div>
+                <div class="alert alert-danger">
+                </div>
+            </div>
+        </div>
+        <div class="row" id="result">
+            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 float-md-left float-lg-left float-xl-left">
+                <h4 class="text-center">Страна:</h4>
+                <p class="text-center" id="country"></p>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 float-md-left float-lg-left float-xl-left">
+                <div id="region_block">
+                    <h4 class="text-center">Регион:</h4>
+                    <p class="text-center" id="region"></p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 float-md-left float-lg-left float-xl-left">
+                <h4 class="text-center">Часовой пояс:</h4>
+                    <p class="text-center" id="timezone"></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

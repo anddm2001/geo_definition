@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+
+  service-nginx:
+    build:
+      context: ./docker/nginx
+    depends_on:
+      - service-php
+    volumes:
+      - ./:/var/www
+    ports:
+      - "8080:80"
+    networks:
+      - net
+
+  service-php:
+    build:
+      context: ./docker/php
+    volumes:
+      - ./:/var/www
+    hostname: php
+    networks:
+      - net
+
+  service-php-cli:
+    build:
+      context: ./docker/php-cli
+    volumes:
+      - ./:/var/www
+      - composer:/root/.composer/cache
+    command: php -d memory_limit=256M
+    networks:
+      - net
+
+volumes:
+  composer:
+
+networks:
+  net:
